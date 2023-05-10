@@ -31,6 +31,17 @@ public class Pessoa {
 	
 	public String email;
 	
+	public boolean deficiente;
+	
+	
+	public boolean getDeficiente () {
+		return deficiente;
+	}
+	
+	public void setDeficiente (boolean deficiente) {
+	this.deficiente = deficiente;
+	}
+	
 	
 	public long getid () {
 		return id;

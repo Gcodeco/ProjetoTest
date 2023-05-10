@@ -1,5 +1,7 @@
 package br.com.danielpadua.java_spring_idea_example.service;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,6 +40,15 @@ import br.com.danielpadua.java_spring_idea_example.repository.PessoaRepository;
 						
 	}
 		
-			
+		
+	public List<Pessoa> listarTodos () {
+		List<Pessoa> listarAlguns = new ArrayList();
+		listarAlguns = pessoaRepository.findAll();
+		
+		for (Pessoa p : listarAlguns){
+				p.setEmail("*******");	
+		};
+		return listarAlguns;
+	}
 		
 }
